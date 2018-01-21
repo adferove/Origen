@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:facet name="first">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	</f:facet>
+	<title>#{mensaje.ColombianOrigin}</title>
+	<h:outputScript name="js/ripple.js" library="ultima-layout" />
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+
+
+	<!--For Plugins external css-->
+	<link rel="stylesheet" href="assets/css/plugins.css" />
+	<link rel="stylesheet" href="assets/css/roboto-webfont.css" />
+
+	<!--Theme custom css -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+
+	<!--Theme Responsive css-->
+	<link rel="stylesheet" href="assets/css/responsive.css" />
+
+	<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+	<script type="text/javascript">
+        $(function() {
+            $('#menu-button').on('click', function(e) {
+                var menu = $('#menu');
+                if(menu.hasClass('lmenu-active')) {
+                    menu.addClass('fadeOutUp');
+                    
+                    setTimeout(function() {
+                        menu.removeClass('fadeOutUp fadeInDown lmenu-active');
+                    },500);
+                }
+                else {
+                    menu.addClass('lmenu-active fadeInDown');
+                }
+                e.preventDefault();
+            });
+        });
+        </script>
+</h:head>
+
+<h:body styleClass="landing-body">
+
+
+	<!-- Sections -->
+	<section id="social" class="social">
+		<div class="container">
+			<!-- Example row of columns -->
+			<div class="row">
+				<div class="social-wrapper">
+					<div class="col-md-6">
+						<div class="social-icon">
+							<a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
+								class="fa fa-twitter"></i></a> <a href="#"><i
+								class="fa fa-google-plus"></i></a> <a href="#"><i
+								class="fa fa-linkedin"></i></a>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="social-contact">
+							<p:panelGrid columns="3">
+								<p:inputText label="Palabra clave"></p:inputText>
+								<p:selectOneMenu>
+									<f:selectItem itemLabel="Seleccione..." />
+									
+								</p:selectOneMenu>
+								<p:button value="Buscar"></p:button>
+							</p:panelGrid>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /container -->
+	</section>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img
+					src="assets/images/logo.png" alt="Logo" /></a>
+
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#home">Inicio</a></li>
+					<li><a href="#features">Catálogo</a></li>
+					<li><a href="#price">Como funciona</a></li>
+					<li><a href="#business">Portal empresas</a></li>
+					<li><a href="#contact">Contáctanos</a></li>
+					<li class="login"><a href="#">Iniciar sesión</a></li>
+				</ul>
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<div class="landing-wrapper">
+		<div id="header">
+			<div class="header-top clearfix">
+				<span class="logo"></span> <a id="menu-button" href="#"> <span
+					class="fa fa-bars"></span>
+				</a>
+				<ul id="menu" class="animated">
+					
+				</ul>
+			</div>
+
+			<div class="header-content clearfix">
+				<h1>#{mensaje.slogan}</h1>
+				<p:button outcome="/dashboard" value="#{mensaje.signUpNow}"
+					styleClass="secondary" />
+				<p:inputText></p:inputText>
+			</div>
+		</div>
+
+		<div id="features">
+			<h2>#{mensaje.ourServices}</h2>
+			<p>#{mensaje.ourServicesText}</p>
+
+			<div class="ui-g">
+				<div class="ui-g-12 ui-md-4">
+					<h3>#{mensaje.directorio}</h3>
+					<p>#{mensaje.directorioIcono}</p>
+					<div class="feature-icon">
+						<i class="material-icons">&#xE86D;</i>
+					</div>
+				</div>
+				<div class="ui-g-12 ui-md-4">
+					<h3>#{mensaje.disenoLogo}</h3>
+					<p>#{mensaje.disenoLogoIcono}</p>
+					<div class="feature-icon">
+						<i class="material-icons">&#xE3AF;</i>
+					</div>
+				</div>
+				<div class="ui-g-12 ui-md-4">
+					<h3>#{mensaje.disenoWeb}</h3>
+					<p>#{mensaje.disenoSitioWeb}</p>
+					<div class="feature-icon">
+						<i class="material-icons">&#xE40A;</i>
+					</div>
+				</div>
+
+				<div class="ui-g-12 ui-md-4">
+					<div></div>
+					<h3></h3>
+					<p></p>
+				</div>
+				<div class="ui-g-12 ui-md-4">
+					<div class="feature-icon">
+						<i class="material-icons">&#xE7FB;</i>
+					</div>
+					<h3>#{mensaje.clientManagement}</h3>
+					<p>#{mensaje.clientManagementIcon}</p>
+				</div>
+				<div class="ui-g-12 ui-md-4">
+					<div></div>
+					<h3></h3>
+					<p></p>
+				</div>
+			</div>
+		</div>
+
+		<div id="promotion" class="clearfix">
+			<div class="ui-g">
+				<div class="ui-g-12 ui-lg-8">
+					<h1>#{mensaje.BoostYourProductivity}.</h1>
+					<p:button outcome="/dashboard" value="#{mensaje.signUpNow}"
+						styleClass="secondary" />
+				</div>
+				<div class="ui-g-12 ui-lg-4">
+					<div class="card">
+						<h3>#{mensaje.whatWeDo}</h3>
+						<p>#{mensaje.whatWeDoText}</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div id="pricing">
+			<h2>Pricing</h2>
+			<p>Esse delectus sit velit, aspernatur voluptates molestiae, enim
+				recusandae. Odit dicta, maiores quas ad nesciunt, illum expedita
+				veritatis illo quam odio id!</p>
+
+			<div class="ui-g">
+				<div class="ui-g-12 ui-md-4 pricing-box pricing-basic">
+					<div class="card">
+						<div class="pricing-header">
+							<span class="name">BASIC</span> <span class="fee">$5</span> <span
+								class="type">Monthly</span>
+						</div>
+						<div class="pricing-content">
+							<ul>
+								<li><i class="material-icons"></i><span>Responsive</span></li>
+								<li><i class="material-icons"></i><span>Push
+										Messages</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="ui-g-12 ui-md-4 pricing-box pricing-standard">
+					<div class="card">
+						<div class="pricing-header">
+							<span class="name">STANDARD</span> <span class="fee">$25</span> <span
+								class="type">Monthly</span>
+						</div>
+						<div class="pricing-content">
+							<ul>
+								<li><i class="material-icons"></i><span>Responsive</span></li>
+								<li><i class="material-icons"></i><span>Push
+										Messages</span></li>
+								<li><i class="material-icons"></i><span>7/24
+										Support</span></li>
+								<li><i class="material-icons"></i><span>Free
+										Shipping</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="ui-g-12 ui-md-4 pricing-box pricing-professional">
+					<div class="card">
+						<div class="pricing-header">
+							<span class="name">PROFESSIONAL</span> <span class="fee">$50</span>
+							<span class="type">Monthly</span>
+						</div>
+						<div class="pricing-content">
+							<ul>
+								<li><i class="material-icons"></i><span>Responsive</span></li>
+								<li><i class="material-icons"></i><span>Push
+										Messages</span></li>
+								<li><i class="material-icons"></i><span>7/24
+										Support</span></li>
+								<li><i class="material-icons"></i><span>Free
+										Shipping</span></li>
+								<li><i class="material-icons"></i><span>Unlimited
+										Bandwidth</span></li>
+								<li><i class="material-icons"></i><span>Unlimited
+										Storage</span></li>
+								<li><i class="material-icons"></i><span>Gift Cards</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="video">
+			<div class="video-content">
+				<h2>Video</h2>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit
+					voluptatem accusantium doloremque.</p>
+				<div class="video-container">
+					<iframe src="https://www.youtube.com/embed/B_lYGUtCd0g"
+						frameborder="0" width="560" height="330"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="footer-content">
+				<div class="ui-g">
+					<div class="ui-g-12 ui-md-6">
+						<p>PRIMEFACES ULTIMA</p>
+					</div>
+					<div class="ui-g-12 ui-md-6">
+						<ul>
+							<li><a href="#mobile">Promotion</a></li>
+							<li><a href="#pricing">Pricing</a></li>
+							<li><a href="#video">Video</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#introduction">Introduction</a></li>
+							<li><a href="#features">Features</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h:outputStylesheet name="css/animate.css" library="ultima-layout" />
+	<h:outputStylesheet name="css/ripple.css" library="ultima-layout" />
+	<h:outputStylesheet name="css/layout-#{guestPreferences.theme}.css"
+		library="ultima-layout" />
+</h:body>
+
+</html>

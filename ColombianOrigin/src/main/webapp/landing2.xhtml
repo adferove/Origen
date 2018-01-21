@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:facet name="first">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	</f:facet>
+	<title>#{mensaje.ColombianOrigin}</title>
+	<h:outputScript name="js/ripple.js" library="ultima-layout" />
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+
+
+	<!--For Plugins external css-->
+	<link rel="stylesheet" href="assets/css/plugins.css" />
+	<link rel="stylesheet" href="assets/css/roboto-webfont.css" />
+
+	<!--Theme custom css -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+
+	<!--Theme Responsive css-->
+	<link rel="stylesheet" href="assets/css/responsive.css" />
+
+	<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+	<script type="text/javascript">
+        $(function() {
+            $('#menu-button').on('click', function(e) {
+                var menu = $('#menu');
+                if(menu.hasClass('lmenu-active')) {
+                    menu.addClass('fadeOutUp');
+                    
+                    setTimeout(function() {
+                        menu.removeClass('fadeOutUp fadeInDown lmenu-active');
+                    },500);
+                }
+                else {
+                    menu.addClass('lmenu-active fadeInDown');
+                }
+                e.preventDefault();
+            });
+        });
+        </script>
+</h:head>
+
+<h:body styleClass="landing-body">
+
+
+	<!-- Sections -->
+	<section id="social" class="social">
+		<div class="container">
+			<!-- Example row of columns -->
+			<div class="row">
+				<div class="social-wrapper">
+					<div class="col-md-6">
+						<div class="social-icon">
+							<a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
+								class="fa fa-twitter"></i></a> <a href="#"><i
+								class="fa fa-google-plus"></i></a> <a href="#"><i
+								class="fa fa-linkedin"></i></a>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="social-contact">
+							<p:panelGrid columns="3">
+								<p:inputText label="Palabra clave"></p:inputText>
+								<p:selectOneMenu>
+									<f:selectItem itemLabel="Seleccione..." />
+
+								</p:selectOneMenu>
+								<p:button value="Buscar"></p:button>
+							</p:panelGrid>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /container -->
+	</section>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img
+					src="assets/images/logo.png" alt="Logo" /></a>
+
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#home">Inicio</a></li>
+					<li><a href="#features">Catálogo</a></li>
+					<li><a href="#price">Como funciona</a></li>
+					<li><a href="#business">Portal empresas</a></li>
+					<li><a href="#contact">Contáctanos</a></li>
+					<li class="login"><a href="#">Iniciar sesión</a></li>
+				</ul>
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<section id="service" class="service2 sections lightbg">
+		<div class="container">
+			<div class="row">
+				<div class="main_service2">
+					<div class="head_title text-center">
+						<h2>Cómo funciona</h2>
+						<p>Contamos con los mejores profesionales para brindarte el
+							mejor servicio.</p>
+					</div>
+					<div class="service_content">
+						<div class="col-md-6 col-sm-6">
+							<div class="single_service2">
+								<div class="single_service_left">
+									<img src="assets/images/flaticon2.png" alt="" />
+								</div>
+								<div class="single_service_right">
+									<h2>Te registras</h2>
+									<p>Y nosotros te contáctamos.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<div class="single_service2">
+								<div class="single_service_left">
+									<img src="assets/images/flaticon3.png" alt="" />
+								</div>
+								<div class="single_service_right">
+									<h2>Imagen</h2>
+									<p>Porque vale más que mil palabras. Te creamos el mejor contenido</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<div class="single_service2">
+								<div class="single_service_left">
+									<img src="assets/images/flaticon4.png" alt="" />
+								</div>
+								<div class="single_service_right">
+									<h2>Intervención con clientes</h2>
+									<p>Si así lo deseas podemos crear tu canal.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<div class="single_service2">
+								<div class="single_service_left">
+									<img src="assets/images/flaticon1.png" alt="" />
+								</div>
+								<div class="single_service_right">
+									<h2>Excelente precio</h2>
+									<p>Y el más asequible</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End of Service2 Section -->
+
+
+	<h:outputStylesheet name="css/animate.css" library="ultima-layout" />
+	<h:outputStylesheet name="css/ripple.css" library="ultima-layout" />
+	<h:outputStylesheet name="css/layout-#{guestPreferences.theme}.css"
+		library="ultima-layout" />
+</h:body>
+
+</html>
